@@ -8,7 +8,7 @@ import {
   query,
   where
 } from 'firebase/firestore';
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const findInitiativeByFieldId = async (initiativeFieldId) => {
   const q = query(collection(db, 'initiatives'), where('id', '==', Number(initiativeFieldId)));
   const snapshot = await getDocs(q);

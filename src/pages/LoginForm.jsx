@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { auth } from '../firebase/firebase';
 import { signInWithCustomToken } from 'firebase/auth';
 import { useNavigate, Link } from 'react-router-dom';
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
